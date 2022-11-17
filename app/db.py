@@ -1,4 +1,4 @@
-import mysql.connector
+import mysql
 import os
 from dotenv import load_dotenv
 from abc import ABC, abstractmethod
