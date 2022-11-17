@@ -1,10 +1,15 @@
 pipeline {
-    agent { dockerfile true }
+    agent { label "aws"}
     stages {
-        stage('Test') {
+        stage('Build Docker Container') {
             steps {
-                sh 'python --version'
+                sh 'docker build -t gpw'
             }
+        }
+        stage('Run Docker Container'){
+            steps{
+                sh 'docker run --rm gpw'
+            }        
         }
     }
 }
