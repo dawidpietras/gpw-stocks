@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Build Docker Container') {
             steps {
-                sh 'docker build -t gpw'
+                sh 'docker build -t gpw .'
             }
         }
         stage('Run Docker Container'){
